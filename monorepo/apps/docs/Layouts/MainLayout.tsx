@@ -1,6 +1,6 @@
 import * as React from "react";
 import Link from "next/Link";
-import { Container, Grid, List, Menu, MenuItem, Stack } from "@mui/material";
+import { Container, Grid, List, MenuItem, Stack } from "@mui/material";
 
 interface Props {
     children: React.ReactNode;
@@ -13,8 +13,8 @@ export default function MainLayout({children}: Props) {
                 <Stack alignItems="flex-start">
                     <List>
                         <MenuItem><Link href="/">Home</Link></MenuItem>
-                        <MenuItem><Link href="/page/1"><a>Page 1 x</a></Link></MenuItem>
-                        <MenuItem><Link href="/page/2"><a>Page 2</a></Link></MenuItem>
+                        <MenuItem><Link href="/page/[id]" as="/page/1"><a>Page 1</a></Link></MenuItem>
+                        <MenuItem><Link href="/page/[id]" as="/page/2"><a>Page 2</a></Link></MenuItem>
                     </List>
                 </Stack>
             </Grid>

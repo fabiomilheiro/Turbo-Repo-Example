@@ -36,21 +36,4 @@ export const getServerSideProps: next.GetServerSideProps<Props> = async (context
     }
 };
 
-// export const getStaticPaths: next.GetStaticPaths = (context) => {
-//     return {
-//         paths: ['/page/1', '/page/2'],
-//         fallback: false
-//     };
-// };
-
-// export const getStaticProps: next.GetStaticProps = (context) => {
-//     const id = context.params.id as string;
-
-//     return {
-//         props: {
-//             test: 1000 + Number.parseInt(id)
-//         }
-//     };
-// };
-
 export default Page;

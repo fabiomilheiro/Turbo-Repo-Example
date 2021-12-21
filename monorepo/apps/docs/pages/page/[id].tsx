@@ -1,6 +1,6 @@
 import * as next from 'next';
 import { useRouter } from "next/dist/client/router";
-import Menu from "../../components/menu";
+import MainLayout from "../../Layouts/MainLayout";
 
 interface Props {
     post: {
@@ -16,13 +16,28 @@ const Page = (props) => {
     const { post, server } = props;
     const router = useRouter();
     const { id } = router.query;
-    return <><Menu /><h1>Page {id}</h1>
-    <p>Rendered from server = {server ? "Yes" : "No"}</p>
-    <h1>{post.title}</h1>
-    <p>{post.body}</p></>
+    return <MainLayout>
+        <h1>Page: {id}</h1>
+        <p>Rendered from server = {server ? "Yes" : "No"}</p>
+        <h1>{post.title}</h1>
+        <p>{post.body}</p>
+    </MainLayout>
 };
 
 export const getServerSideProps: next.GetServerSideProps<Props> = async (context) => {
+    if (typeof context.params.id !== "string") {
+        return { props: {
+            server: true,
+            test: "",
+            post: {
+                id: 0,
+                title: "",
+                body: "",
+                userId: ""
+            }
+        }};
+    }
+
     const post =
         await fetch(`https://jsonplaceholder.typicode.com/posts/${context.params.id}`)
             .then(response => response.json());

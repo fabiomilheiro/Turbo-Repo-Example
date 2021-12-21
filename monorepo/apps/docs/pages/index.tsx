@@ -1,12 +1,12 @@
 import { Button } from "ui";
 import Menu from "../components/menu";
+import MainLayout from "../Layouts/MainLayout";
 
 export default function Docs() {
   return (
-    <div>
-      <Menu />
+    <MainLayout>
       <h1>Docs</h1>
-      <Button>Example 3</Button>
-    </div>
+      <Button>docs test</Button>
+    </MainLayout>
   );
 }

@@ -5,7 +5,7 @@ export default function Web() {
   return (
     <div>
       <h1>Web</h1>
-      <MuiButton onClick={() => console.log("Web touched it.")}>MuiButton in web project</MuiButton>
+      <Button onClick={() => console.log("Web touched it.")}>MuiButton in web project</Button>
     </div>
   );
 }

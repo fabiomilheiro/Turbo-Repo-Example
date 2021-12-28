@@ -5,7 +5,7 @@ export default function Docs() {
   return (
     <MainLayout>
       <h1>Docs</h1>
-      <Button>docs test</Button>
+      <Button onClick={() => console.log("The docs touched the button.")}>docs test</Button>
     </MainLayout>
   );
 }

@@ -15,6 +15,7 @@ export default function MainLayout({children}: Props) {
                         <MenuItem><Link href="/">Home</Link></MenuItem>
                         <MenuItem><Link href="/page/[id]" as="/page/1"><a>Page 1</a></Link></MenuItem>
                         <MenuItem><Link href="/page/[id]" as="/page/2"><a>Page 2</a></Link></MenuItem>
+                        <MenuItem><Link href="/page/[id]" as="/page/3"><a>Page 3</a></Link></MenuItem>
                     </List>
                 </Stack>
             </Grid>

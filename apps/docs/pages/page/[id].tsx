@@ -1,5 +1,5 @@
 import * as next from 'next';
-import { useRouter } from "next/dist/client/router";
+import { useRouter } from "next/router";
 import MainLayout from "../../Layouts/MainLayout";
 
 interface Props {

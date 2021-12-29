@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Container, Grid, List, MenuItem, Stack } from "@mui/material";
-import Link from "next/Link";
+import Link from "next/link";
 
 interface Props {
     children: React.ReactNode;
